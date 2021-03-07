@@ -4,12 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Player {
-	List<Card> hand = new ArrayList<>();
-	int score = 0;
-	String name;
+	private List<Card> hand = new ArrayList<>();
+	private int score = 0;
+	private String name;
 	
 	public Player (String name) {
 		this.name = name;
+		this.score = 0;
 	}
 	// Describe method
 		public String describe() {
@@ -32,11 +33,12 @@ public class Player {
 		}
 	
 	// incrementScore method
-		public void incrementScaore() {
+		public void incrementScore() {
 			score++;
 		}
 		
 		public int getScore() {
 			return score;
 		}
+		
 }

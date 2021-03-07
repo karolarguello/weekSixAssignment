@@ -20,22 +20,21 @@ public class App {
 			}
 		}
 		// For Loop 26 to Flip for each method
-		for (int a = 0; a < 26;  a++) {
-			int Karol = player1.flip().getValue();
-			int Matilda = player2.flip().getValue();
-			if (Karol > Matilda){
-				player1.incrementScaore();
-				System.out.println("Karol wins this round");
-			} else if (Karol < Matilda) {
-				player2.incrementScaore();
-				System.out.println("Matilda wins this round");
-			} else {
-				System.out.println("DRAW!!");
+
+		for (int i = 0; i < 26; i++) {
+			Card Karol = player1.flip();
+			Card Matilda = player2.flip();
+			if (Karol.getValue() > Matilda.getValue()) {
+				player1.incrementScore();
+			} else if (Karol.getValue() < Matilda.getValue()) {
+				player2.incrementScore();
 			}
 		}
 		// Compare final Score
-		System.out.println("Karol's final score! :" + " " + player1.getScore());
-		System.out.println("Matilda's final score! :" + " " + player2.getScore());
+		System.out.println("Final Score: ");
+		System.out.println("Karol's final score :" + " " + player1.getScore());
+		System.out.println("Matilda's final score :" + " " + player2.getScore());
+		
 		if (player1.getScore() > player2.getScore()) {
 			System.out.println("Karol wins WAR!");
 		} else if (player1.getScore() < player2.getScore()) {
@@ -44,5 +43,6 @@ public class App {
 			System.out.println("DARW!");
 			
 		}
+		
 }
 }
